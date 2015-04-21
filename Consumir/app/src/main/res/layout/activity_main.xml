@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".activity_main">
+
+    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView" />
+    <EditText
+        android:id="@+id/editText1"
+        android:digits="0123456789"
+        android:layout_width="fill_parent"
+        android:layout_height="65dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="Grados C"
+        android:layout_alignBaseline="@+id/mostrar"
+        android:layout_alignBottom="@+id/mostrar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:onClick="onclickInsertar"
+        android:text="Convertir C -> F"
+        android:layout_below="@+id/editText1"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/mostrar"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:text="Grados Fahrenheit: "
+        android:textColor="@android:color/white"
+        android:layout_alignTop="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
